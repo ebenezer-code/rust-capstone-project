@@ -14,8 +14,8 @@ fn main() -> bitcoincore_rpc::Result<()> {
     let auth = Auth::UserPass(RPC_USER.into(), RPC_PASS.into());
 
     // Clients for each wallet
-    let miner_rpc = Client::new(&format!("{}/wallet/Miner", RPC_BASE), auth.clone())?;
-    let trader_rpc = Client::new(&format!("{}/wallet/Trader", RPC_BASE), auth.clone())?;
+    let miner_rpc = Client::new(&format!("{RPC_BASE}/wallet/Miner"), auth.clone())?;
+    let trader_rpc = Client::new(&format!("{RPC_BASE}/wallet/Trader"), auth.clone())?;
 
     // Generate miner address and mine 101 blocks
     let miner_address = miner_rpc
