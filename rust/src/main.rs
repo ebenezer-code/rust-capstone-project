@@ -103,6 +103,6 @@ fn main() -> bitcoincore_rpc::Result<()> {
     writeln!(file, "{block_height}")?;
     writeln!(file, "{blockhash}")?;
 
-    println!("✅ out.txt written");
+    println!("out.txt written");
     Ok(())
 }
